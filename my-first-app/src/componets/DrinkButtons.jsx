@@ -1,15 +1,17 @@
-const DrinkButton = () => {
-return (
-    <>
-    <header>
-        <h2> Would you like tea or coffee?</h2>
-    </header>
-    <div>
-        <button>Tea</button>
-        <button>Coffee</button>
-    </div>
-    </>
-);
-};
+import "./DrinkButtons.css";
 
-export default DrinkButton;
+function DrinkButtons({drinkOne, drinkTwo}) {
+  return (
+    <>
+      <header>
+        <h2> Would you like {drinkOne} or {drinkTwo}?</h2>
+      </header>
+      <div className="button-group">
+        <button className="button">{drinkOne}</button>
+        <button className="button">{drinkTwo}</button>
+      </div>
+    </>
+  );
+}
+
+export default DrinkButtons;

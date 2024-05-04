@@ -1,21 +1,28 @@
 import "./App.css";
-import DrinkButton from "./componets/DrinkButtons";
+import DrinkButtons from "./componets/DrinkButtons";
+import { coffee, tea } from "../utils/data";
+import { DrinkChoice } from "./componets/DrinkChoice";
+import Button from "./componets/UI/Button";
 
 
 
-  const App = () => {
-    const Greeting = "Welcome to Joni Cafe!";
-    const Description = <p>Discover the finest coffee and pastries in town.</p>;
-  
-    return (
-      <div className="">
-        <header>
-          <h1>{Greeting}</h1>
-        </header>
-        <p>{Description}</p>
-        <DrinkButton/>
-      </div>
-    );
-  };
+const App = () => {
+  const Greeting = "Welcome to Joni Cafe!";
+
+  const userDrink = tea;
+
+  return (
+    <div className="">
+      <header>
+        <h1>{Greeting}</h1>
+      </header>
+      <DrinkButtons drinkOne={tea.name} drinkTwo={coffee.name} />
+      <DrinkChoice drink={userDrink} />
+      
+      <Button text={tea.name}/>
+      <Button text={coffee.name}/>
+       </div>
+  );
+};
 
 export default App;

@@ -1,0 +1,11 @@
+.Button {
+    margin-top: 1rem;
+    border-radius: 15px;
+    border: none;
+    padding: 1rem;
+    background-color: blueviolet;
+    color: white;
+    font-size: 1.5 rem;
+    font-weight: 600;
+    margin: 10px;
+}
